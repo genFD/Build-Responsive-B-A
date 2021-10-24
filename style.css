@@ -27,12 +27,26 @@ End of Global Styles
 */
 .navbar {
   width: 100%;
-  height: 100vh;
+  height: 8rem;
   background-color: rgba(0, 0, 0, 0.9);
+  background-color: #9b0e0e;
   position: fixed;
-  top: 0;
+  top: -8rem;
   z-index: 10;
   padding: 3rem;
+  transition: height 0.4s;
+  animation: animateNavbar 1s 0.5s forwards;
+}
+@keyframes animateNavbar {
+  0% {
+    top: -8rem;
+  }
+  100% {
+    top: 0;
+  }
+}
+.navchange {
+  height: 100%;
 }
 .nav-links {
   /* display: none; */
@@ -43,6 +57,14 @@ End of Global Styles
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+}
+.linkschange {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.4s 0.2s;
 }
 .nav-links a {
   font-family: 'Oswald', sans-serif;
@@ -82,12 +104,22 @@ End of Global Styles
   height: 0.2rem;
   background-color: #eee;
 }
+.menuchange .line-one {
+  transform: translate(100%, 1rem) rotate(35deg);
+  transform-origin: right;
+}
 .line-one {
   width: 50%;
+  transition: all 0.7s;
+}
+.menuchange .line-three {
+  transform: translateY(-1rem) rotate(-35deg);
+  transform-origin: right;
 }
 .line-three {
   width: 50%;
   margin-left: auto;
+  transition: all 0.7s;
 }
 /*
 =============== 
