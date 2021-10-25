@@ -75,7 +75,7 @@ End of Global Styles
   transition: color 0.4s;
 }
 .nav-links a:hover {
-  color: #9b0e0e;
+  color: #222;
 }
 .logo {
   position: absolute;
@@ -126,6 +126,7 @@ End of Global Styles
 section I
 ===============
 */
+
 .section-one {
   width: 100%;
   height: 100vh;
@@ -140,6 +141,8 @@ section I
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  /* background-color: saddlebrown; */
+  margin-top: 2rem;
 }
 .banner-heading {
   margin-bottom: 4rem;
@@ -201,7 +204,7 @@ section I
     letter-spacing: 3rem;
   }
 }
-.banner-paragraph {
+/* .banner-paragraph {
   font-size: 2.5rem;
   font-weight: 400;
   text-transform: uppercase;
@@ -214,7 +217,7 @@ section I
   opacity: 0;
   visibility: hidden;
   animation: fadeAnimation 1s 1.5s forwards;
-}
+} */
 @keyframes fadeAnimation {
   0% {
     opacity: 0;
@@ -244,6 +247,7 @@ section I
   animation: fadeAnimation 1s 2s forwards;
   position: relative;
   overflow: hidden;
+  margin-top: 3rem;
 }
 .banner-btn::before {
   content: '';
@@ -263,4 +267,113 @@ section I
 =============== 
 end of section I
 ===============
+*/
+/*
+=============== 
+Section II
+===============
+*/
+.section-two {
+  width: 100%;
+  height: 100vh;
+  background-color: #222002;
+  display: flex;
+  align-items: center;
+  padding: 0 10rem;
+  position: relative;
+}
+.section-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 8rem;
+  font-weight: 300;
+  color: #ddd;
+  /* border: 2px solid red; */
+  margin-right: 3rem;
+}
+.video-wrapper {
+  width: 80rem;
+  height: 50rem;
+  position: absolute;
+  top: 5rem;
+  right: 15rem;
+  box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, 0.5);
+}
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  /* margin-left: 3rem; */
+}
+.video-bar-wrapper {
+  width: 100%;
+  height: 0.7rem;
+  background-color: #222002;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.video-bar {
+  height: 100%;
+  width: 20%;
+  background-color: #9b0e0e;
+}
+.buttons {
+  padding: 2rem 1rem 1rem 1rem;
+}
+.buttons button {
+  background: #fff;
+  border: none;
+  cursor: pointer;
+}
+.buttons i {
+  font-size: 2.8rem;
+  color: #fff;
+}
+.section-two-paragraph {
+  width: 100rem;
+  position: absolute;
+  bottom: 5rem;
+  right: 15rem;
+  font-size: 2rem;
+  color: #ddd;
+  /* border-top: 0.3rem double #aaa;
+  border-bottom: 0.3rem double #aaa; */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  text-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.4);
+  line-height: 1.5;
+  /* border: 2px solid red; */
+}
+.fa-quote-left {
+  align-self: flex-start;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+.fa-quote-right {
+  align-self: flex-end;
+  font-size: 5rem;
+}
+.section-title-line {
+  width: 10rem;
+  height: 0.8rem;
+  background-color: #9b0e0e;
+  margin-right: 5rem;
+  /* border: 2px solid red; */
+}
+.controls {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*
+================== 
+end of section II
+=================
 */
