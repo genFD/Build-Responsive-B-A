@@ -536,3 +536,90 @@ pricing-card-list li {
 End of Section III
 =================
 */
+/*
+================== 
+Section IV
+=================
+*/
+.section-four {
+  width: 100%;
+  height: 100vh;
+  background: #171718;
+  display: flex;
+  align-items: center;
+  padding: 0 10rem;
+  /* border: 2px solid red; */
+}
+.contact-wrapper {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid red; */
+  /* height: 100vh; */
+}
+.contact-details {
+  display: flex;
+  /* margin-bottom: 3rem; */
+}
+.contact-details div {
+  width: 25rem;
+  text-align: center;
+  margin: 4rem;
+}
+.contact-details i {
+  font-size: 5rem;
+  color: #7a1010;
+}
+.contact-details h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  color: #ccc;
+  text-transform: uppercase;
+}
+.contact-details p {
+  font-size: 1.6rem;
+  color: #aaa;
+}
+.contact-wrapper h1 {
+  font-size: 4rem;
+  color: #ccc;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+.contact-form {
+  width: 70rem;
+  display: flex;
+  flex-direction: column;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 1.5rem;
+  background-color: #444;
+  color: #eee;
+  border: none;
+  margin-bottom: 2rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.3rem;
+  /* font-weight: 300; */
+}
+.contact-form textarea {
+  max-width: 100%;
+  max-height: 12rem;
+  min-height: 5.5rem;
+}
+.contact-form input[type='submit'] {
+  background-color: #444;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.contact-form input[type='submit']:hover {
+  background-color: #7a1010;
+}
+/*
+================== 
+End of Section IV
+=================
+*/
