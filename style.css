@@ -25,18 +25,11 @@ html {
 End of Global Styles
 ===============
 */
-.navbar {
-  width: 100%;
-  height: 8rem;
-  background-color: rgba(0, 0, 0, 0.9);
-  background-color: #9b0e0e;
-  position: fixed;
-  top: -8rem;
-  z-index: 10;
-  padding: 3rem;
-  transition: height 0.4s;
-  animation: animateNavbar 1s 0.5s forwards;
-}
+/*
+=============== 
+Navbar and sidebar
+===============
+*/
 @keyframes animateNavbar {
   0% {
     top: -8rem;
@@ -45,11 +38,22 @@ End of Global Styles
     top: 0;
   }
 }
+.navbar {
+  width: 100%;
+  height: 8rem;
+  background-color: #9b0e0e;
+  position: fixed;
+  top: -8rem;
+  z-index: 10;
+  padding: 3rem;
+  transition: height 0.4s;
+  animation: animateNavbar 1s 0.5s forwards;
+}
+
 .navchange {
   height: 100%;
 }
 .nav-links {
-  /* display: none; */
   position: absolute;
   top: 25%;
   left: 50%;
@@ -89,7 +93,6 @@ End of Global Styles
 .menu {
   width: 4rem;
   height: 4rem;
-  /* background-color: #eee; */
   position: fixed;
   z-index: 100;
   top: 2rem;
@@ -98,6 +101,18 @@ End of Global Styles
   flex-direction: column;
   justify-content: space-evenly;
   cursor: pointer;
+  animation: bounce 2s ease infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .line {
   width: 100%;
@@ -121,6 +136,13 @@ End of Global Styles
   margin-left: auto;
   transition: all 0.7s;
 }
+
+/*
+=========================
+End of navbar and sidebar
+=========================
+*/
+
 /*
 =============== 
 section I
@@ -130,7 +152,7 @@ section I
 .section-one {
   width: 100%;
   height: 100vh;
-  background: url(./images/othr-bg2.jpg) no-repeat;
+  background: url(./images/hero-bg.jpg) no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -141,7 +163,6 @@ section I
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  /* background-color: saddlebrown; */
   margin-top: 2rem;
 }
 .banner-heading {
@@ -156,7 +177,7 @@ section I
   font-weight: 400;
   text-transform: uppercase;
   color: #fff;
-  text-shadow: 0.3rem 0.3rem 0.6rem rgba(0, 0, 0, 0.5);
+  text-shadow: 0.5rem 1.5rem 0.6rem rgba(0, 0, 0, 0.5);
   position: absolute;
   width: 100%;
   display: flex;
@@ -204,20 +225,7 @@ section I
     letter-spacing: 3rem;
   }
 }
-/* .banner-paragraph {
-  font-size: 2.5rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.6);
-  width: 30%;
-  margin: 0 auto 4rem auto;
-  padding: 1rem 0;
-  box-shadow: 1rem 1rem 5rem rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  visibility: hidden;
-  animation: fadeAnimation 1s 1.5s forwards;
-} */
+
 @keyframes fadeAnimation {
   0% {
     opacity: 0;
@@ -232,8 +240,7 @@ section I
 .banner-btn {
   width: 30rem;
   height: 6rem;
-  background-color: linear-gradient(#9b0e0e, #7a1010);
-  background-color: #9b0e0e;
+  background: linear-gradient(to right, #9b0e0e, #7a1010, #9b1010);
   color: #fff;
   font-size: 2rem;
   text-transform: uppercase;
@@ -281,16 +288,17 @@ Section II
   align-items: center;
   padding: 0 10rem;
   position: relative;
+  overflow: hidden;
 }
 .section-title {
   font-family: 'Oswald', sans-serif;
   font-size: 8rem;
   font-weight: 300;
   color: #ddd;
-  /* border: 2px solid red; */
   margin-right: 3rem;
 }
-.video-wrapper {
+
+.about-wrapper {
   width: 80rem;
   height: 40rem;
   position: absolute;
@@ -298,44 +306,18 @@ Section II
   right: 15rem;
   box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, 0.5);
 }
-.video {
+.about-us-pic {
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0.3;
   overflow: hidden;
   transition: opacity 0.3s;
-  /* margin-left: 3rem; */
-}
-
-.video-bar-wrapper {
-  width: 100%;
-  height: 0.7rem;
-  background-color: #222002;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.video-bar {
-  height: 100%;
-  width: 20%;
-  background-color: #9b0e0e;
-}
-.buttons {
-  padding: 2rem 1rem 1rem 1rem;
-}
-
-.buttons i {
-  background: #000;
-  color: #800505;
-  border: none;
-  font-size: 3.8rem;
-  /* border: 2px solid red; */
 }
 
 .section-two-paragraph {
   width: 80rem;
-  height: 15rem;
+  height: 10rem;
   position: absolute;
   bottom: 5rem;
   right: 15rem;
@@ -349,7 +331,7 @@ Section II
   text-align: justify;
   text-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.4);
   line-height: 1.5;
-  border: 2px solid red;
+  margin-top: 1rem;
 }
 .fa-quote-left {
   align-self: flex-start;
@@ -359,20 +341,6 @@ Section II
 .fa-quote-right {
   align-self: flex-end;
   font-size: 5rem;
-}
-.section-title-line {
-  width: 10rem;
-  height: 0.8rem;
-  background-color: #9b0e0e;
-  margin-right: 5rem;
-  /* border: 2px solid red; */
-}
-.controls {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  /* transform: translateY(calc(100% - 0.4rem)); */
 }
 
 /*
@@ -392,24 +360,21 @@ Section III
   background: #03070e;
   display: flex;
   align-items: center;
-  border: 2px solid red;
   padding: 0 3rem;
 }
+
 .pricing-cards-wrapper {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  /* border: 2px solid red; */
-  /* padding: 0 3rem; */
 }
 .pricing-card {
-  width: 25rem !important ;
-  height: 45rem !important ;
+  width: 25rem;
+  height: 45rem;
   background: #181b1d;
   border-radius: 1rem;
   box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, 0.7);
   margin-left: 2rem;
-  /* transform: rotateY(180deg); */
 }
 .pricing-card-front {
   width: 100%;
@@ -502,35 +467,7 @@ pricing-card-list li {
 .btn-premium {
   background-color: #3be286;
 }
-.pricing-card-back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: rotateY(180deg);
-  border-radius: 1rem;
-}
 
-.back-free {
-  background: linear-gradient(to right, #087285, #0da5d3);
-}
-.back-basic {
-  background: linear-gradient(to right, #946809, #bdba0e);
-}
-.back-standard {
-  background: linear-gradient(to right, #810c14, #e23e3b);
-}
-.back-premium {
-  background: linear-gradient(to right, #0b7b48, #3b806e);
-}
-.pricing-card-back a {
-  font-size: 2.5rem;
-  color: #fff;
-}
 /*
 ================== 
 End of Section III
@@ -548,19 +485,15 @@ Section IV
   display: flex;
   align-items: center;
   padding: 0 10rem;
-  /* border: 2px solid red; */
 }
 .contact-wrapper {
   width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: 1px solid red; */
-  /* height: 100vh; */
 }
 .contact-details {
   display: flex;
-  /* margin-bottom: 3rem; */
 }
 .contact-details div {
   width: 25rem;
@@ -603,7 +536,6 @@ Section IV
   font-family: 'Oswald', sans-serif;
   font-size: 1.8rem;
   letter-spacing: 0.3rem;
-  /* font-weight: 300; */
 }
 .contact-form textarea {
   max-width: 100%;
@@ -618,8 +550,129 @@ Section IV
 .contact-form input[type='submit']:hover {
   background-color: #7a1010;
 }
+
 /*
 ================== 
 End of Section IV
 =================
 */
+
+/*
+================== 
+Media queries
+==================
+*/
+@media (max-width: 1360px) {
+  .banner {
+    width: 80%;
+  }
+  .pricing-card {
+    margin: 3rem 1.8rem;
+  }
+  .pricing-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .section-three,
+  .section-one,
+  .section-two,
+  .section-four {
+    flex-direction: column;
+  }
+  .about-wrapper {
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80rem;
+  }
+
+  .section-two-paragraph {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80rem;
+  }
+  .section-three {
+    height: auto;
+    padding: 5rem 3rem 8rem 3rem;
+  }
+  .section-three .section-title {
+    margin-bottom: 5rem;
+  }
+  .section-four {
+    height: auto;
+    padding: 3rem 0;
+  }
+}
+@media (max-width: 1080px) {
+  .contact-details div {
+    width: 25rem;
+    margin: 3rem 1rem;
+  }
+  .contact-form {
+    width: 80rem;
+  }
+}
+@media (max-width: 900px) {
+  html {
+    font-size: 45%;
+  }
+  .banner {
+    top: 25%;
+  }
+  .banner-heading {
+    height: 15rem;
+  }
+  .banner-heading span {
+    font-size: 8rem;
+  }
+  .section-two {
+    height: 80vh;
+  }
+  .contact-details div {
+    margin: 3rem 2rem;
+  }
+  .contact-form {
+    width: 80%;
+  }
+}
+@media (max-width: 700px) {
+  html {
+    font-size: 40%;
+  }
+  .section-two {
+    height: 70vh;
+  }
+  .contact-details {
+    width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  .about-wrapper {
+    width: 70rem;
+  }
+  .section-two-paragraph {
+    width: 70rem;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 35%;
+  }
+  .banner-heading span {
+    font-size: 4.5rem;
+    letter-spacing: 2rem;
+  }
+  .about-wrapper {
+    width: 60rem;
+  }
+  .section-two-paragraph {
+    width: 60rem;
+  }
+  .contact-details div {
+    width: 18rem;
+    margin: 3rem 1rem;
+  }
+  .contact-form {
+    width: 60rem;
+  }
+}
